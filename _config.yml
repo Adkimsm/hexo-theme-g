@@ -1,0 +1,76 @@
+#---------------------------
+# Global
+#---------------------------
+
+# 用于背景图
+bgimg: /10_gettyimages-508748776_super_resized.jpg
+
+# 背景图的色调强度，使用原始图片请填 100%
+bgsat: 500%
+
+# 背景图的模糊度，不模糊请填 0
+bgblu: 20px
+
+# 用于header、footer的颜色
+hfcolor: '#26689e'
+
+# 用于统计运行日期
+buildtime: 2020-07-17
+
+#---------------------------
+# header & Footer
+#---------------------------
+
+# Header & Footer的Nav链接
+pages:
+  Home:
+    link: "/"
+  Archive:
+    link: "/archives/"
+  Categories:
+    link: "/categories/"
+  Tags:
+    link: "/tags/"
+  About:
+    link: "/about/"
+  Links:
+    link: "/links/"
+
+#---------------------------
+# Links
+#---------------------------
+
+# 友情链接
+links:
+    - {
+      title: 'Adkinsm Home',
+      intro: 'Adkinsm 主页',
+      link: 'https://www.adkinsm.top/',
+      image: '/assets/images/favicon.png'
+    }
+    - {
+      title: 'Adkinsm BLOG',
+      intro: 'Adkinsm 博客',
+      link: 'https://blog.adkinsm.top/',
+      image: '/assets/images/favicon.png'
+    }
+#---------------------------
+# 404
+#---------------------------
+
+page404:
+  enable: true
+
+#---------------------------
+# Tags
+#---------------------------
+
+pagetags:
+  enable: true
+
+#---------------------------
+# Categories
+#---------------------------
+
+pagecate:
+  enable: true

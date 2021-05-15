@@ -1,0 +1,32 @@
+<div id="page">
+    <div id="page-content">
+        <h2 id="page-content-title"><%- page.title %></h2>
+        <div id="page-content-article">
+            <%- page.content %>
+        </div>
+        <hr>
+        <div id="post-tags">
+            <p>
+                <% page.tags.each(function(tag) { %>
+                <a class="hover-with-bg" href="<%= url_for(tag.path) %>"><%- tag.name %></a>
+                <% }) %>
+            </p>
+        </div>
+        <p class="updateon" id="post-lastEdit">最后更新于 <%- date(page.updated) %> </p>
+        <div class="page-navigator">
+            <% const prev = prev_post(page) %>
+            <% if (prev) { %>
+            <a href="<%= url_for(prev.path) %>" class="prev_post"><%- prev.title %></a>
+            <% } %>
+
+            <% const next = next_post(page) %>
+            <% if (next) { %>
+            <a href="<%= url_for(next.path) %>" class="next_post"><%- next.title %></a>
+            <% } %>
+        </div>
+
+    </div>
+
+</div>
+</div>
+</div>

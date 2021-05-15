@@ -1,0 +1,22 @@
+  <div id="archives" class="archives">
+    <div id="archives-content">
+        <h2 id="page-content-title"><%- page.title %></h2>
+        <div id="timeline">
+          <% var dateCursor %>
+          <% page.posts.each(function (post) { %>
+            <% if(date(post.date, "YYYY") !== dateCursor) { %>
+              <% dateCursor = date(post.date, "YYYY") %>
+              <h3 class="archive-title"><%= dateCursor %></h3>
+            <% } %>
+            <a href="<%- url_for(post.path) %>" class="list-group-item list-group-item-action">
+              <span class="archive-post-title"><%= post.title %></span>
+              <time class="time" style="float: right;color:#888;"><%- date(post.date, "MM-DD") %></time> <br>
+            </a>
+          <% }) %>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>

@@ -1,0 +1,22 @@
+            <div id="article" class="clear">
+                <div id="article-content">
+
+                    <% page.posts.forEach(post => { %>
+                    <a href="<%- url_for(post.path); %>">
+                        <div id="article-1" class="article-item hoverup">
+                            <div class="article-item-content">
+                                <h2><span><%= post.title %></span></h2>
+                                <p class="clear"><span id="article-author"><%- config.author %></span>
+                                <span id="article-date"><%= date(post.date, config.date_format); %></span></p>
+                            </div>
+                        </div>
+                    </a>
+                    <% }); %>
+
+                </div>
+                <div class="paginator">
+                    <%- paginator() %>
+                </div>
+                
+            </div>
+            

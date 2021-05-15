@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta name="viewport"
+        content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Adkinsm BLOG</title>
+    <%- js('JS/jquery.min.js') %>
+    <%- js('JS/message.min.js') %>
+    <%- css('CSS/G.css') %>
+    <link href="<%- url_for('/CSS/message.css') %>" rel="stylesheet">
+    <%- css('/CSS/prism.css') %>
+    <script>
+        window.QMSG_GLOBALS = {
+            DEFAULTS: {
+                showClose: false,
+                timeout: 1000,
+                html: false
+            }
+        }
+    </script>
+    <link href="<%- url_for('/CSS/dark.css') %>" rel="stylesheet" disabled title="dark">
+    <link href="<%- url_for('/CSS/toastr.min.css') %>" rel="stylesheet">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="keywords" content="<%= config.keywords %>">
+    <style>
+        html {
+            background-color: rgb(136, 136, 136);
+        }
+
+        html::before {
+            background-image: url("<%= theme.bgimg %>");
+            z-index: -1;
+            filter: saturate(<%=theme.bgsat %>) blur(<%=theme.bgblu %>);
+        }
+
+        #zp,
+        #links,
+        #page,
+        #post,
+        #article,
+        #comments,
+        #post-related-posts {
+            opacity: 0.9;
+        }
+
+        .opacity-show {
+            animation: opacity-show 1s;
+            -moz-animation: opacity-show 1s;
+            /* Firefox*/
+            -webkit-animation: opacity-show 1s;
+            /* Safari and Chrome*/
+            -o-animation: opacity-show 1s;
+            /* Opera*/
+        }
+
+        .opacity-disappear {
+            animation: opacity-disappear 1s;
+            -moz-animation: opacity-disappear 1s;
+            /* Firefox*/
+            -webkit-animation: opacity-disappear 1s;
+            /* Safari and Chrome*/
+            -o-animation: opacity-disappear 1s;
+            /* Opera*/
+        }
+
+        #header,
+        #footer {
+            background: <%=theme.hfcolor %>
+                /* #26689e */
+            ;
+        }
+
+        #post-content-article h1,
+        #post-content-article h2,
+        #post-content-article h3,
+        #post-content-article h4 {
+            color: RGB(48, 71, 88);
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-container">
+            <h2><%= config.title %></h2>
+            <div class="clear">
+                <span><%= config.description %></span>
+                <nav>
+                    <% for (var i in theme.pages){ %>
+                    <a href="<%= theme.pages[i].link %>"><%= i %></a>
+                    <% } %>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部/pjax -->
+    <div id="pjax-container">

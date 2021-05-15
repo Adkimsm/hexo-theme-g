@@ -1,0 +1,27 @@
+            <div id="links">
+                <div id="links-content">
+                    <h2>ともだち</h2>
+                    <div id="links-post">
+                        <%- page.content %>
+                    </div>
+                 </div>
+                <div class="friends">
+                   <% for (var i in theme.links){ %>
+                            <li class='clear'>
+                                <a href='<%= theme.links[i].link %>' target='_blank'></a>
+                                <img src='<%= theme.links[i].image %>' alt='<%= theme.links[i].title %>'/>
+                                <div class='link-item-content'>
+                                    <h3><%= theme.links[i].title %></h3>
+                                    <p><%= theme.links[i].intro %></p>
+                                </div>
+                            </li>
+                      <% } %>
+                </div>
+                <br><hr>
+            </div>
+          </div>
+
+
+
+</div>
+</div>

@@ -1,0 +1,24 @@
+{
+  "name": "hexo-theme-g",
+  "version": "1.0.0",
+  "description": "a beautiful hexo theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adkinsm2020/hexo-theme-g.git"
+  },
+  "keywords": [
+    "g",
+    "hexo",
+    "theme"
+  ],
+  "author": "Adkinsm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adkinsm2020/hexo-theme-g/issues"
+  },
+  "homepage": "https://github.com/adkinsm2020/hexo-theme-g#readme"
+}

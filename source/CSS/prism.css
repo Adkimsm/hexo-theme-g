@@ -6,12 +6,17 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
+ @font-face {
+	font-family: 'JetBrains Mono';
+	src: url('./JetBrainsMono-Regular.ttf');
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	background: none;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: JetBrains Mono;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -220,8 +225,8 @@ div.code-toolbar {
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: .3em;
-	right: .2em;
+	top: 1rem;
+	right: 2rem;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
 }
@@ -254,7 +259,7 @@ div.code-toolbar > .toolbar button {
 div.code-toolbar > .toolbar a,
 div.code-toolbar > .toolbar button,
 div.code-toolbar > .toolbar span {
-	color: #bbb;
+	color: rgb(78, 78, 78);
 	font-size: .8em;
 	padding: 0 .5em;
 	background: #f5f2f0;

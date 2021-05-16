@@ -12,7 +12,7 @@
                 <% }) %>
             </p>
         </div>
-        <p class="updateon" id="post-lastEdit">最后更新于 <%- date(page.updated) %> </p>
+        <p class="updateon" id="post-lastEdit"><%- __('zhgx') %> <%- date(page.updated) %> </p>
         <div class="page-navigator">
             <% const prev = prev_post(page) %>
             <% if (prev) { %>

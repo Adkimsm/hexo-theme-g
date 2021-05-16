@@ -12,8 +12,6 @@
 
     </div>
 
-    <script src="<%- url_for('/JS/jquery.pjax.min.js') %>"></script>
-    <script src="<%- url_for('/JS/jquery.lazyload.min.js') %>"></script>
     <%- js('JS/X.js') %>
     <%- js('JS/prism.js') %>
     <script src="<%- url_for('/JS/toastr.min.js') %>"></script>
@@ -77,14 +75,7 @@
 </div>
 
 <script>
-    toc();
     collapse_toggle();
-    jQuery(document).ready(function ($) {
-        $("img.lazyload").lazyload({
-            threshold: 100,
-            effect: "fadeIn"
-        });
-    });
     show_site_runtime("<%= theme.buildtime %>");
 </script>
 </body>

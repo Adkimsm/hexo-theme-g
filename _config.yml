@@ -21,6 +21,12 @@ buildtime: 2020-07-17
 # header & Footer
 #---------------------------
 
+# Header 的图像
+
+headerimg:
+  enable: true
+  link: /IMG/title.png
+
 # Header & Footer的Nav链接
 pages:
   Home:
@@ -41,6 +47,7 @@ pages:
 #---------------------------
 
 # 友情链接
+
 links:
     - {
       title: 'Adkinsm Home',

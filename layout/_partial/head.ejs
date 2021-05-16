@@ -7,13 +7,15 @@
     <title>Adkinsm BLOG</title>
     <%- js('JS/jquery.min.js') %>
     <%- js('JS/message.min.js') %>
+    <%- js('JS/prism.js') %>
     <%- css('CSS/G.css') %>
     <link href="<%- url_for('/CSS/message.css') %>" rel="stylesheet">
+    <link href="<%- url_for('/CSS/prism.css') %>" rel="stylesheet">
     <%- css('/CSS/prism.css') %>
     <script>
         window.QMSG_GLOBALS = {
             DEFAULTS: {
-                showClose: false,
+                showClose: true,
                 timeout: 1000,
                 html: false
             }
@@ -66,7 +68,7 @@
 
         #header,
         #footer {
-            background: <%=theme.hfcolor %>
+            background: <%= theme.hfcolor %>
                 /* #26689e */
             ;
         }
@@ -84,6 +86,10 @@
 
 <body>
     <div id="header">
+        <% if (theme.headerimg.enable) { %>
+            <img id="header-logo" src="<%= theme.headerimg.link %>"></img>
+        <% } %>
+        
         <div id="header-container">
             <h2><%= config.title %></h2>
             <div class="clear">

@@ -1,0 +1,12 @@
+<% if (theme.waline.enable) { %>
+    <div id="waline" style="margin: 20px;"></div>
+    <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
+    <script type="text/javascript">
+          new Waline({
+            el: "#waline",
+            serverURL: "<%= theme.waline.serverURL %>",
+          });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  <% } %>
+  

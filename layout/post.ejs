@@ -1,18 +1,21 @@
-<div id="page">
-    <div id="page-content">
-        <h2 id="page-content-title"><%- page.title %></h2>
-        <div id="page-content-article">
+<div id="post">
+    <div id="post-header" style="background-image:url(<%- page.coverimg %>)">
+        <div id="post-header-mask">
+            <div id="post-header-content">
+                <h2 id="post-content-title"><%- page.title %></h2>
+                <span id="post-content-meta">
+                    <% page.categories.each(function(cate) { %>
+                    <a class="hover-with-bg" href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+                    <% }) %>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="post-content">
+        <div id="post-content-article">
             <%- page.content %>
         </div>
-        <hr>
-        <div id="post-tags">
-            <p>
-                <% page.tags.each(function(tag) { %>
-                <a class="hover-with-bg" href="<%= url_for(tag.path) %>"><%- tag.name %></a>
-                <% }) %>
-            </p>
-        </div>
-        <p class="updateon" id="post-lastEdit"><%- __('zhgx') %> <%- date(page.updated) %> </p>
         <div class="page-navigator">
             <% const prev = prev_post(page) %>
             <% if (prev) { %>
@@ -24,9 +27,28 @@
             <a href="<%= url_for(next.path) %>" class="next_post"><%- next.title %></a>
             <% } %>
         </div>
-
     </div>
 
+    <div id="post-footer" class="clear">
+        <div id="post-tags">
+            <p>
+                <% page.tags.each(function(tag) { %>
+                <a class="hover-with-bg" href="<%= url_for(tag.path) %>"><%- tag.name %></a>
+                <% }) %>
+            </p>
+        </div>
+        <div id="post-lastEdit">
+            <p>最后编辑于 <%- date(page.updated) %></p>
+        </div>
+    </div>
 </div>
+
+<% if (page.comments) { %>
+<div id="comments">
+    <div class="comments-header">
+        <div id="comment-form">
+            <%- partial('_partial/comments') %>
+        </div>
+    </div>
 </div>
-</div>
+<% } %>

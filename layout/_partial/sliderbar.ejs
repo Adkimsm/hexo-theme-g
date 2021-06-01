@@ -23,7 +23,7 @@
 <div id="sliderbar-toc" class="is-position-fixed move_right">
     <div class="toc">
         <ol class="toc-list">
-            <%- toc(page.content,{list_number:false}) || render('<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" style="cursor: normal;"><span class="toc-text">Nothing.</span></a></li></ol>', 'ejs'); %>
+            <%- toc(page.content,{list_number:false}); %>
         </ol>
     </div>
 </div>

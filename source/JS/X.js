@@ -78,9 +78,7 @@ function pjax_click() {
 function pjax_send() {
 	$("#M").addClass("opacity-disappear");
 
-	if (typeof (NProgress) !== "undefined") {
-		NProgress.start();
-	}
+	NProgress.start();
 }
 
 function pjax_complete() {
@@ -106,9 +104,7 @@ function pjax_complete() {
 			effect: "fadeIn"
 		});
 	});
-	if (typeof (NProgress) !== "undefined") {
-		NProgress.done();
-	}
+	NProgress.done();
 }
 
 function show_site_runtime(bdate) {

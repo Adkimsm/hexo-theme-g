@@ -1,7 +1,7 @@
             <div id="article" class="clear">
                 <div id="article-content">
-
                     <% page.posts.forEach(post => { %>
+                    <% if(theme.indexpp == 1){ %> 
                     <a href="<%- url_for(post.path); %>">
                         <div id="article-1" class="article-item hoverup">
                             <div class="article-item-content">
@@ -11,6 +11,20 @@
                             </div>
                         </div>
                     </a>
+                    <% }else{ %> 
+                        <div class="card-item">
+                            <article>
+                              <div class="card-cover" style="background-image: url(<%= post.cover %>)"></div>
+                              <a class="article-link card-link" href="<%- url_for(post.path); %>" itemprop="url"></a>
+                              <h2 class="article-title"><%= post.title %></h2>
+                              <div class="article-meta">
+                                <div class="article-category">
+                                  <a class="article-date"><%= date(post.date, config.date_format); %></a>
+                                </div>
+                              </div>
+                            </article>
+                          </div>
+                        <% } %> 
                     <% }); %>
 
                 </div>

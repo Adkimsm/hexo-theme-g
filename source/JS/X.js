@@ -34,7 +34,7 @@ function switchNightMode() {
 			document.querySelector('link[title="dark"]').disabled = true;
 			document.querySelector('link[title="dark"]').disabled = false;
 			document.cookie = "night=1;path=/"
-			Qmsg.info("夜间模式开启", QMSG_GLOBALS.DEFAULTS);
+			Qmsg.info("检测时间为晚上，夜间模式自动开启，您可手动关闭", QMSG_GLOBALS.DEFAULTS);
 		} else {
 			document.cookie = "night=0;path=/"
 		}

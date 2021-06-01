@@ -50,6 +50,66 @@ function switchNightMode() {
 	}
 })();
 
+//pjax 刷新
+$(document).pjax('a:not(a[target="_blank"], a[no-pjax])', {
+	container: '#pjax-container',
+	fragment: '#pjax-container',
+	timeout: 8000
+}).on('pjax:send', function () {
+	pjax_send();
+}).on('pjax:complete', function () {
+	pjax_complete();
+}).on('pjax:click', function () {
+	pjax_click();
+});
+
+function pjax_click() {
+	//结束aplayer进程
+	if (typeof aplayers !== 'undefined') {
+		for (var i = 0; i < aplayers.length; i++) {
+			try {
+				aplayers[i].destroy()
+			} catch (e) {}
+		}
+	}
+
+}
+
+function pjax_send() {
+	$("#M").addClass("opacity-disappear");
+
+	if (typeof (NProgress) !== "undefined") {
+		NProgress.start();
+	}
+}
+
+function pjax_complete() {
+	//Prism重启
+	if (typeof Prism !== 'undefined') {
+		Prism.highlightAll(true, null);
+	}
+	//Meting重启
+	var isFunction = false;
+	try {
+		isFunction = typeof (eval('loadMeting')) == "function";
+	} catch (e) {}
+	if (isFunction) {
+		loadMeting();
+	} else {}
+
+	//显示主页面
+	$("#M").addClass("opacity-show");
+	collapse_toggle();
+	jQuery(document).ready(function ($) {
+		$("img.lazyload").lazyload({
+			threshold: 100,
+			effect: "fadeIn"
+		});
+	});
+	if (typeof (NProgress) !== "undefined") {
+		NProgress.done();
+	}
+}
 
 function show_site_runtime(bdate) {
 	window.setTimeout("show_site_runtime('" + bdate + "')", 1000);

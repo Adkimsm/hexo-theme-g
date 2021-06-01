@@ -1,0 +1,256 @@
+/**
+ * @name: G.css
+ * @description: 主题G主要样式表
+ * @author: youranreus(youranreus@qq.com)
+ * @Updater: Adkinsm(adkinsm@163.com)
+ * @last-update: 2021-06-01
+ */
+
+
+ @font-face {
+	font-family: 'JetBrains Mono';
+	src: url('./JetBrainsMono-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'poppin';
+	src: url('./poppin.ttf');
+}
+
+/**
+  * 基本样式
+  */
+* {
+	font-family: 'poppin', 'JetBrains Mono', BlinkMacSystemFont, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif;
+	;
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	padding: 0px;
+	margin: 0;
+	overflow-x: hidden;
+	z-index: -1;
+}
+
+.page-navigator .page-number {
+	display: none;
+}
+
+a:link {
+	text-decoration: none;
+	color: #07f;
+}
+
+a:visited {
+	color: #07f;
+}
+
+html::before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-position: center 0;
+}
+
+html::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+}
+
+.clear,
+.page-navigator,
+.clear::before,
+.page-navigator::before,
+.clear::after,
+.page-navigator::after {
+	display: block;
+	clear: both;
+}
+
+.clear::before,
+.clear::after,
+.page-navigator::after,
+.page-navigator::before {
+	content: '';
+}
+
+::selection {
+	background-color: #D6EDFF;
+}
+
+html::-webkit-scrollbar {
+	height: 8px;
+	width: 8px
+}
+
+html::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+	background-clip: padding-box;
+	background-color: gray;
+	min-height: 40px;
+	padding-top: 100px;
+	border-radius: 4px
+}
+
+html::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:active {
+	background-color: #b3b3b3
+}
+
+html::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+	height: 8px;
+	width: 8px;
+}
+
+html::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+	background-clip: padding-box;
+	background-color: #696969;
+	min-height: 40px;
+	padding-top: 100px;
+	border-radius: 4px
+}
+
+#pjax-container {
+	opacity: 1;
+	-webkit-transition: .6s ease all;
+	-moz-transition: .6s ease all;
+	-ms-transition: .6s ease all;
+	-o-transition: .6s ease all;
+	transition: .6s ease all;
+}
+
+/**
+ * 小部件
+ */
+#m_menu,
+#m_top,
+#m_search,
+#m_toc {
+	position: fixed;
+	right: 50px;
+	z-index: 999;
+	padding: .725rem;
+	background: rgba(250, 250, 250, 0.9);
+	border: 1px solid #444;
+	border-radius: 2.5rem;
+	-webkit-transition: .6s ease all;
+	-moz-transition: .6s ease all;
+	-ms-transition: .6s ease all;
+	-o-transition: .6s ease all;
+	transition: .6s ease all;
+	cursor: pointer;
+}
+
+#m_menu {
+	bottom: 50px;
+}
+
+#m_toc {
+	bottom: 150px;
+}
+
+#m_top {
+	bottom: 100px;
+}
+
+#m_night {
+	left: 50px;
+	position: fixed;
+	z-index: 999;
+	padding: .725rem;
+	background: rgba(250, 250, 250, 0.9);
+	border: 1px solid #444;
+	border-radius: 2.5rem;
+	-webkit-transition: .6s ease all;
+	-moz-transition: .6s ease all;
+	-ms-transition: .6s ease all;
+	-o-transition: .6s ease all;
+	transition: .6s ease all;
+	cursor: pointer;
+	bottom: 50px;
+}
+
+.m_search_c {
+	bottom: 150px !important;
+}
+
+.i {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	display: inline-block;
+	background-size: 100%;
+}
+
+.gototop {
+	background: url(../IMG/up.svg)no-repeat center;
+	background-size: 100%;
+}
+
+.m_menu {
+	background: url(../IMG/menu.svg)no-repeat center;
+	background-size: 100%;
+}
+
+.m_search {
+	background: url(../IMG/search.svg)no-repeat center;
+	background-size: 100%;
+}
+
+.m_toc {
+	background: url(../IMG/toc2.svg)no-repeat center;
+	background-size: 100%;
+}
+
+.m_night {
+	background: url(../IMG/night.svg)no-repeat center;
+	background-size: 100%;
+}
+
+.down {
+	background: url(../IMG/down.svg)no-repeat center;
+	background-size: 100%;
+	width: 35px;
+	height: 35px;
+}
+
+.ins-search-container {
+	z-index: 1000 !important;
+}
+
+div.code-toolbar>.toolbar a,
+div.code-toolbar>.toolbar button,
+div.code-toolbar>.toolbar span {
+	color: #bbb;
+	font-size: .8em;
+	padding: 0 .5em;
+	outline: none;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0) !important;
+	background: rgba(224, 224, 224, 0) !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	-webkit-transition: .3s ease all;
+	-moz-transition: .3s ease all;
+	-ms-transition: .3s ease all;
+	-o-transition: .3s ease all;
+	transition: .3s ease all;
+}
+
+// [ALL.LESS(END)]

@@ -1,0 +1,178 @@
+
+/**
+ * 头部
+ */
+
+ #header {
+	border-radius: 30px;
+	background: #787878;
+	box-shadow: 0px 0px 70px 6px rgba(0, 0, 0, 0.12);
+	padding: 1px;
+	width: 800px;
+	margin: 50px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#header-container {
+	margin: 50px;
+	position: relative;
+	z-index: 3;
+}
+
+#header-logo {
+	opacity: 0.2;
+	position: absolute;
+	top: -110px;
+	right: -110px;
+	height: 25rem;
+	z-index: 2;
+}
+
+#header-container>* {
+	margin: 0;
+}
+
+#header-container h2 {
+	font-size: 2rem;
+	color: white;
+	font-weight: 200;
+	margin-bottom: 10px;
+	margin-left: 11px;
+}
+
+#header-container div span {
+	color: hsla(0, 0%, 100%, .6);
+	font-size: 1.1rem;
+	float: left;
+	margin-left: 11px;
+}
+
+#header-container div nav {
+	margin: 0;
+	float: right;
+	text-align: right;
+}
+
+#header-container div nav a {
+	color: hsla(0, 0%, 100%, .6);
+	font-weight: 400;
+	font-size: 1.1rem;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+#header-container div nav a:hover {
+	color: white;
+}
+
+.nav-focus {
+	color: white !important;
+}
+
+.nav-focus:after {
+	content: '';
+	display: block;
+	margin-top: 5px;
+	height: 3px;
+	margin-left: 2px;
+	width: 70%;
+	background: white;
+	border-radius: 100000000rem;
+	animation: nav-width 0.5s;
+	-moz-animation: nav-width 0.5s;
+	/* Firefox*/
+	-webkit-animation: nav-width 0.5s;
+	/* Safari and Chrome*/
+	-o-animation: nav-width 0.5s;
+	/* Opera*/
+}
+
+
+/**
+ * footer
+ */
+
+ #footer {
+	width: 800px;
+	margin: 20px auto;
+	background: RGB(113, 114, 122);
+	box-shadow: 0px 0px 70px 6px rgba(0, 0, 0, 0.12);
+	padding: 1px;
+	border-radius: 30px;
+}
+
+#footer-content {
+	margin: 10px 49px;
+	color: white;
+}
+
+#footer-content-left {
+	float: left;
+	width: 70%;
+}
+
+#footer-content-right {
+	float: right;
+	position: relative;
+}
+
+#footer-content-right p {
+	position: relative;
+}
+
+#footer-content-left p {
+	line-height: 1.7;
+	font-size: 1.2rem;
+}
+
+#footer-content-left p a {
+	line-height: 1.7;
+	font-size: 1.2rem;
+	color: white !important;
+}
+
+#site_runtime {
+	display: inline-block;
+}
+
+#site_runtime span {
+	font-size: 1rem;
+}
+
+#footer-content-right img {
+	height: 50px;
+	margin-right: 20px;
+}
+
+#nav-2 {
+	margin: 0px 0px 24px 0;
+	position: relative;
+	overflow-x: auto;
+	white-space: nowrap;
+	max-width: 100%;
+}
+
+#nav-2::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 100%, .6);
+}
+
+#nav-2 a {
+	display: inline-block;
+	color: white !important;
+	margin-right: 10px;
+	font-size: 16px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+#nav-2 a:hover {
+	-webkit-transform: translateY(-4px);
+	-moz-transform: translateY(-4px);
+	-ms-transform: translateY(-4px);
+	-o-transform: translateY(-4px);
+	transform: translateY(-4px);
+}
+
+
+// [HEFO.LESS(END)]

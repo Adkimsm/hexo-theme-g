@@ -22,7 +22,7 @@
     <%- js('JS/jquery.pjax.min.js') %>
     <%- js('JS/X.js') %>
     <%- js('JS/prism.js') %>
-    <%- js('JS/jquery.lazyload.min.js') %>
+    <%- js('JS/lazyload.min.js') %>
     <%- js('JS/nprogress.js') %>
     <script src="<%- url_for('/JS/toastr.min.js') %>"></script>
 
@@ -40,6 +40,8 @@
 
 <script>
     collapse_toggle();
+	PreFancybox();
+	imageinfo();
     show_site_runtime("<%= theme.buildtime %>");
 </script>
 </body>

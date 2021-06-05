@@ -72,12 +72,10 @@ function pjax_click() {
 			} catch (e) {}
 		}
 	}
-
 }
 
 function pjax_send() {
 	$("#M").addClass("opacity-disappear");
-
 	NProgress.start();
 }
 
@@ -97,6 +95,8 @@ function pjax_complete() {
 
 	//显示主页面
 	$("#M").addClass("opacity-show");
+	PreFancybox();
+	imageinfo();
 	collapse_toggle();
 	jQuery(document).ready(function ($) {
 		$("img.lazyload").lazyload({
@@ -107,6 +107,40 @@ function pjax_complete() {
 	NProgress.done();
 }
 
+function PreFancybox(){
+	$("#post img").each(function(){
+				$(this).wrap(function(){
+					if($(this).is(".bq"))
+					{
+						 return '';
+					}
+					if($(this).is("#feedme-content img"))
+					{
+						return '';
+					}
+				return '<a data-fancybox="gallery" no-pjax data-type="image" href="' + $(this).attr("src") + '" class="light-link"></a>';
+		 });
+	});
+}
+
+function imageinfo(){
+	$("#post img").each(function(){
+				$(this).wrap(function(){
+					if($(this).is(".bq"))
+					{
+						 return '';
+					}
+					if($(this).is("#feedme-content img"))
+					{
+						return '';
+					}
+					$(this).addClass("lazyload");
+					$(this).attr('data-original',$(this).attr("src"));
+					this.onerror=function(){$(this).attr('src','/IMG/loading.gif');};
+					$(this).after('<span class="imageinfo">'+ $(this).attr("title") +'</span>');
+		 });
+	});
+}
 function show_site_runtime(bdate) {
 	window.setTimeout("show_site_runtime('" + bdate + "')", 1000);
 	X = new Date(bdate);
@@ -123,8 +157,6 @@ function show_site_runtime(bdate) {
 	S = Math.floor(s);
 	site_runtime.innerHTML = D + "<span>天</span>" + H + "<span>小时</span>" + M + "<span>分</span>" + S + "<span>秒</span>"
 }
-
-
 
 //赞赏按钮
 function feedme_show() {

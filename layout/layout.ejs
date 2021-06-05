@@ -1,14 +1,21 @@
 <%- partial('_partial/head') %>
 <!-- 头部/pjax -->
 <div id="pjax-container">
+    <div id="M">
+        <%- body %>
+    </div>
+    <div id="sliderbar-toc" class="is-position-fixed move_right">
+        <div class="toc">
+            <ol class="toc-list">
+                <%- toc(page.content,{list_number:false}) || render("<li class='toc-item toc-level-1'><a class='toc-link'><span class='toc-text'>Nothing</span></a></li>", 'html'); %>
+            </ol>
+        </div>
+    </div>
     <script>
         console.clear();
         console.info(" %c Powered by Hexo ", 'color:#fadfa3;background:#030307;padding:5px 0;');
         console.info(" %c made with ❤ by youranreus & Adkinsm ", 'color: #fadfa3; background: #030307; padding:5px 0;')
     </script>
-    <div id="M">
-        <%- body %>
-    </div>
 </div>
 
 
@@ -20,8 +27,5 @@
     <span><a><i class="i m_menu"></i></a></span>
 </div>
 
-<div id="m_night" onclick="switchNightMode();">
-    <span><a><i class="i m_night"></i></a></span>
-</div>
 
 <%- partial('_partial/footer') %>

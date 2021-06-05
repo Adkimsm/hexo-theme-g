@@ -12,44 +12,6 @@ var mobileHover = function () {
 	});
 };
 
-//夜间模式开关
-function switchNightMode() {
-	var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-	if (night == '0') {
-		document.querySelector('link[title="dark"]').disabled = true;
-		document.querySelector('link[title="dark"]').disabled = false;
-		document.cookie = "night=1;path=/"
-		Qmsg.info("夜间模式开启", QMSG_GLOBALS.DEFAULTS);
-	} else {
-		document.querySelector('link[title="dark"]').disabled = true;
-		document.cookie = "night=0;path=/"
-		Qmsg.info("夜间模式关闭", QMSG_GLOBALS.DEFAULTS);
-	}
-}
-
-//自动判断夜间模式
-(function () {
-	if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") == '') {
-		if (new Date().getHours() > 22 || new Date().getHours() < 6) {
-			document.querySelector('link[title="dark"]').disabled = true;
-			document.querySelector('link[title="dark"]').disabled = false;
-			document.cookie = "night=1;path=/"
-			Qmsg.info("检测时间为晚上，夜间模式自动开启，您可手动关闭", QMSG_GLOBALS.DEFAULTS);
-		} else {
-			document.cookie = "night=0;path=/"
-		}
-	} else {
-		var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-		if (night == '0') {
-			document.querySelector('link[title="dark"]').disabled = true;
-		} else if (night == '1') {
-			document.querySelector('link[title="dark"]').disabled = true;
-			document.querySelector('link[title="dark"]').disabled = false;
-			Qmsg.info("夜间模式开启", QMSG_GLOBALS.DEFAULTS);
-		}
-	}
-})();
-
 //pjax 刷新
 $(document).pjax('a:not(a[target="_blank"], a[no-pjax])', {
 	container: '#pjax-container',
@@ -131,7 +93,7 @@ function imageinfo(){
 					$(this).addClass("lazyload");
 					$(this).attr('data-original',$(this).attr("src"));
 					this.onerror=function(){$(this).attr('src','/IMG/loading.gif');};
-					$(this).after('<span class="imageinfo">'+ $(this).attr("title") +'</span>');
+					$(this).after('<span class="imageinfo">'+ $(this).attr("alt") +'</span>');
 		 });
 	});
 }

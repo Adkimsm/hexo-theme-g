@@ -8133,7 +8133,7 @@ Prism.languages.tap = {
                 o.onload = function () {
                     if (r = window.ClipboardJS)
                         for (; i.length;) i.pop()()
-                }, o.src = "/JS/clipboard.min.js", e.appendChild(o)
+                }
             }
             Prism.plugins.toolbar.registerButton("copy-to-clipboard", function (e) {
                 var t = document.createElement("button");

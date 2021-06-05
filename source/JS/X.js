@@ -98,12 +98,6 @@ function pjax_complete() {
 	PreFancybox();
 	imageinfo();
 	collapse_toggle();
-	jQuery(document).ready(function ($) {
-		$("img.lazyload").lazyload({
-			threshold: 100,
-			effect: "fadeIn"
-		});
-	});
 	NProgress.done();
 }
 

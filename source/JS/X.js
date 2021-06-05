@@ -211,6 +211,3 @@ function show_slide_content(id) {
 		$("#Sliderbar-content-" + id).prev().find('i').css(rotate2);
 	}
 }
-
-console.info(" %c Powered by Hexo ", 'color:#fadfa3;background:#030307;padding:5px 0;');
-console.info(" %c made with ❤ by youranreus & Adkinsm ", 'color: #fadfa3; background: #030307; padding:5px 0;')

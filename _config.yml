@@ -27,6 +27,9 @@ headerimg:
   enable: true
   link: /IMG/title.png
 
+hyiyan:
+  enable: true
+
 # Header & Footer的Nav链接
 pages:
   Home:

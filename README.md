@@ -1,7 +1,10 @@
-# hexo-theme-g
+# Hexo-Theme-G
+
 A theme Form Typecho.
 
-## 使用 
+(已进入任意发展时期)
+
+## 使用
 
 将整个文件夹重命名为 `g` ，放入`站点根目录/themes/`目录。
 
@@ -9,7 +12,7 @@ A theme Form Typecho.
 
 在根目录运行：
 
-```bash
+```sh
 hexo clean
 hexo s
 ```
@@ -17,3 +20,8 @@ hexo s
 ## demo
 
 [Adkinsm BLOG](//blog.adkinsm.top/)
+
+## License
+
+Licenced By [SATA](./LICENSE)
+

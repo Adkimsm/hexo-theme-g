@@ -6,10 +6,10 @@
 bgimg: /10_gettyimages-508748776_super_resized.jpg
 
 # 背景图的色调强度，使用原始图片请填 100%
-bgsat: 500%
+bgsat: 700%
 
-# 背景图的模糊度，不模糊请填 0
-bgblu: 20px
+# 背景图的模糊度，不模糊请填 0px
+bgblu: 25px
 
 # 用于header、footer的颜色
 hfcolor: '#26689e'
@@ -27,9 +27,6 @@ headerimg:
   enable: true
   link: /IMG/title.png
 
-hyiyan:
-  enable: true
-
 # Header & Footer的Nav链接
 pages:
   Home:
@@ -44,15 +41,6 @@ pages:
     link: "/about/"
   Links:
     link: "/links/"
-
-#---------------------------
-# Index
-#---------------------------
-
-# 首页文章排序
-  # 默认的"1"代表单行，为白色一行的样式来陈列文章。
-  # 也可以选择"2"，代表大图，蓝色的，抽取头图，适合文章图片较多的人士。(在文章Front-Matter里使用cover属性规定头图)
-indexpp: 2
 
 #---------------------------
 # Links
@@ -100,5 +88,5 @@ pagecate:
 
 # 由于我使用Waline，所以我决定最先支持Waline
 waline:
-  enable: false
-  serverURL: ''
+  enable: true
+  serverURL: 'https://talk-blog.vercel.app/'

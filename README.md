@@ -1,3 +1,7 @@
+> 目前已经不再更新了，本人也已经更换到了新主题，emoji:smile （自己也看不下去自己写的主题了）
+
+---
+
 # Hexo-Theme-G
 
 A theme Form Typecho.

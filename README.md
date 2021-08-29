@@ -23,7 +23,7 @@ hexo s
 
 ## demo
 
-<u> [Adkinsm BLOG](//blog.adkinsm.top/) </u>
+<del> [Adkinsm BLOG](//blog.adkinsm.top/) </del>
 
 ## License
 
